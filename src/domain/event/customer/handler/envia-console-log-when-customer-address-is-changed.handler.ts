@@ -5,6 +5,6 @@ export default class EnviaConsoleLogWhenCustomerAddressIsChangedHandler
     implements EventHandlerInterface<CustomerAddressChangedEvent>
 {
     handle(event: CustomerAddressChangedEvent): void {
-        console.log(`Sending email 1 when customer is created to...`);
+        console.log(`Endereço do cliente: ${event.eventData.id}, ${event.eventData.name} alterado para: ${event.eventData.Address}`);
     }
 }
