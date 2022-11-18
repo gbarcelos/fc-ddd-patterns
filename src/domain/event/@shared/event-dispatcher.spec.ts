@@ -125,6 +125,7 @@ describe("Domain events tests", () => {
 
         // Customer created
         const customer = new Customer("123", "Customer 1");
+        customer.Address = new Address("Street 1", 123, "13330-250", "São Paulo");
         eventDispatcher.notify(new CustomerCreatedEvent(customer));
 
         expect(spyEntHandlerCreateCustomerLog1).toHaveBeenCalled();
